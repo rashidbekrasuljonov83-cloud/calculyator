@@ -1,4 +1,4 @@
-import Button from "./button";
+import Button from "./Button";
 import { useState } from "react";
 function Calculyator() {
   const [display, setDisplay] = useState("0");
