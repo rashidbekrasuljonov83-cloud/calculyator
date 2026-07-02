@@ -31,7 +31,8 @@ function Calculyator() {
       setDisplay(current.length <= 1 ? "0" : current.slice(0, -1));
     } else if (val === "=") {
       try {
-        const natija = eval(current.replace(/x/g, "*"));
+        const tozalanganKod = current.replace(/x/g, "*");
+        const natija = new Function(`return ${tozalanganKod}`)();
         setDisplay(String(natija));
       } catch {
         setDisplay("Xato");
